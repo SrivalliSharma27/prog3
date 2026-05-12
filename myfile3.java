@@ -1,11 +1,8 @@
-public class myfile3 {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-        pipeline {
+pipeline {
     agent any
 
     environment {
-        registry = '4vv23ci104/test4'
+        registry = '4vv23ci064/test14'
         registryCredential = 'jenkin_docker_token'
         dockerimage = ''
     }
@@ -17,7 +14,7 @@ public class myfile3 {
                 checkout scmGit(
                     branches: [[name: '*/main']],
                     extensions: [],
-                    userRemoteConfigs: [[url: 'https://github.com/SrivalliSharma27/dockerprog.git']]
+                    userRemoteConfigs: [[url: 'https://github.com/Nithaksha-07/programiz.git']]
                 )
             }
         }
@@ -29,6 +26,5 @@ public class myfile3 {
                 }
             }
         }
-    }
     }
 }
